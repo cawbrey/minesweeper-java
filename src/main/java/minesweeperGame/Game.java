@@ -251,7 +251,7 @@ public class Game {
         if(x > 0 && boardArray[1][x-1][y] == COVERED)
             pressTile(x-1, y);
     }
-
+    //todo some covered tiles on corners aren't being pressed
     private void pressCoveredTile(int x, int y){
         if(outOfBounds(x, y) || !isCovered(x, y) ){
             return;
@@ -330,7 +330,7 @@ public class Game {
     public boolean isGameWon(){
         return gameWon;
     }
-
+    //todo put flag on remaining tiles if the game ends
     private void updateGameState(){
         int numCorrectFlags = 0, numCovers = 0;
 

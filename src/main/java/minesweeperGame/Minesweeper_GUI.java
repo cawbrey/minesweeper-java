@@ -107,15 +107,14 @@ public class Minesweeper_GUI extends Application {
         System.out.println("Game Running: " + board.isGameRunning());
         System.out.println("Game Won: " + board.isGameWon());
         System.out.println("Time: " + board.getGameTime());
-
+        //todo need to add timer and bombs left to game screen
 
         updateBoard();
     }
 
     private void LoadAssets(){
         for(int i = 0; i < assets.length; i++){
-            //assets[i] = new Image(String.format("/assets/%d.bmp", i));
-            assets[i] = new Image("../assets/0.bmp");
+            assets[i] = new Image("file:" + String.format("src/main/resources/assets/%d.bmp", i));
         }
     }
 }

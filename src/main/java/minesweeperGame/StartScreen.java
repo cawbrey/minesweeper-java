@@ -8,8 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Scanner;
 
 public class StartScreen extends Application {
@@ -53,7 +53,8 @@ public class StartScreen extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(new URL("file:///C:/Users/Carter/Coding Workspace/Java/minesweeper/src/main/resources/com.example.minesweeper/start-screen.fxml"));
+        System.out.println("Working Directory = " + new File(".").getAbsolutePath());
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         stage.setTitle("Minesweeper");
