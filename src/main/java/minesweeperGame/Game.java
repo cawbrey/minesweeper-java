@@ -306,7 +306,7 @@ public class Game {
 
         return y > rows - 1;
     }
-
+    //todo fix recursion problem
     private void pressBomb(int inputX, int inputY){
         for(int y = 0; y < rows; y++){
             for(int x = 0; x < columns; x++){
